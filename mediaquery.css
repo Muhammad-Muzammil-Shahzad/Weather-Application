@@ -1,0 +1,89 @@
+@media screen and (min-width: 100px) and (max-width: 900px) {
+    
+    .parent-sec,
+    .mainsec {
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .left-sec {
+        width: 95%;
+    }
+
+    .alpha-two,
+    .alpha-three,
+    .alpha-one,
+    .alpha-four,
+    .alpha-five {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .beta-two {
+        width: 97%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .beta-one {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 75%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .right-sec {
+        width: 97%;
+    }
+
+    .appName {
+        display: none;
+    }
+
+    .beta-three-child,
+    .gamma-one,
+    .gamma-two {
+        text-align: center;
+    }
+
+    .beta-three-child,
+    .beta-four {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .parent-sec,
+    .mainsec {
+        height: auto;
+    }
+
+    .for-column {
+        flex-direction: column;
+        height: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        gap: 15px;
+    }
+
+    .second-sec {
+        height: auto;
+    }
+
+    .for-dates {
+        margin-top: 20px;
+    }
+
+    @media screen and (min-width: 100px) and (max-width: 350px) {
+        .appName {
+            font-size: 14px;
+            width: auto;
+        }
+
+    }
+}

@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaquery.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="parent-sec">
+        <section class="mainsec">
+            <section class="left-sec">
+                <div class="input-search">
+                    <input type="text" id="input-country" class="alpha-one" placeholder="Enter City to Search">
+                    <button class="search" id="search">Search</button>
+                </div>
+                <img alt="storm" class="alpha-two" id="main-icon">
+                <div class="alpha-three" id="main-temp"></div>
+                <div class="alpha-four" id="main-status"></div>
+                <div class="alpha-five">
+                    <div class="date" id="main-date"></div>
+                    <div class="place" id="main-place"></div>
+                </div>
+            </section>
+            <section class="right-sec">
+                <div class="beta-one">
+                    <p class="appName">Weather Forecast Application</p>
+                    <div class="beta-one-child">
+                        <button class="fn" id="btn-fn">°F</button>
+                        <button class="dc" id="btn-dc">°C</button>
+                    </div>
+                </div>
+                <div class="beta-two">
+                    <div class="further-days">
+                        <div class="date-day" id="date-day-one"></div>
+                        <img alt="" class="weather-icon-further" id="weather-icon-one">
+                        <div class="temp-status">
+                            <div class="temp" id="max-temp-one"></div>
+                            <div class="temp" id="min-temp-one"></div>
+                        </div>
+                    </div>
+                    <div class="further-days">
+                        <div class="date-day" id="date-day-two"></div>
+                        <img alt="" class="weather-icon-further" id="weather-icon-two">
+                        <div class="temp-status">
+                            <div class="temp" id="max-temp-two"></div>
+                            <div class="temp" id="min-temp-two"></div>
+                        </div>
+                    </div>
+                    <div class="further-days">
+                        <div class="date-day" id="date-day-three"></div>
+                        <img alt="" class="weather-icon-further" id="weather-icon-three">
+                        <div class="temp-status">
+                            <div class="temp" id="max-temp-three"></div>
+                            <div class="temp" id="min-temp-three"></div>
+                        </div>
+                    </div>
+                    <div class="further-days">
+                        <div class="date-day" id="date-day-four"></div>
+                        <img alt="" class="weather-icon-further" id="weather-icon-four">
+                        <div class="temp-status">
+                            <div class="temp" id="max-temp-four"></div>
+                            <div class="temp" id="min-temp-four"></div>
+                        </div>
+                    </div>
+                    <div class="further-days">
+                        <div class="date-day" id="date-day-five"></div>
+                        <img alt="" class="weather-icon-further" id="weather-icon-five">
+                        <div class="temp-status">
+                            <div class="temp" id="max-temp-five"></div>
+                            <div class="temp" id="min-temp-five"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="beta-three">
+                    <div class="beta-three-child">
+                        Today's Highlight
+                    </div>
+                </div>
+
+                <div class="beta-four">
+                    <div class="beta-four-child">
+                        <div class="gamma-one">Wind Speed</div>
+                        <div class="gamma-two" id="first-block-response"></div>
+                        <div class="gamma-three"></div>
+                    </div>
+                    <div class="beta-four-child">
+                        <div class="gamma-one">Humadity</div>
+                        <div class="gamma-two" id="second-block-response"></div>
+                        <div class="gamma-three"></div>
+                    </div>
+                </div>
+                <div class="beta-five">
+                    <div class="beta-five-child">
+                        <div class="gamma-one">Feels Like</div>
+                        <div class="gamma-two" id="third-block-response"></div>
+                    </div>
+                    <div class="beta-five-child">
+                        <div class="gamma-one">Atmospheric Pressure</div>
+                        <div class="gamma-two" id="fourth-block-response"></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <section class="second-sec">
+        <div class="for-dates" id="for-dates-one">
+        </div>
+        <section class="second-sec-child for-column">
+            <div class="hexa-one">
+                <div class="heading">Sun-Rise</div>
+                <img src="sun-rise.png" alt="" id="sun-rise" class="set-rise-moon">
+                <div class="below-txt" id="sun-rise-time-one"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Sun-Set</div>
+                <img src="sun-set.png" alt="" id="sun-set" class="set-rise-moon">
+                <div class="below-txt" id="sun-set-time-one"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Moon Phase</div>
+                <img src="moon.png" alt="" id="moon-phase" class="set-rise-moon">
+                <div class="below-txt" id="moon-phase-text-one"></div>
+            </div>
+        </section>
+        <section class="second-sec-child scroll-div">
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-0-time"></div>
+                <img class="hourly-img" src="" id="one-0-img">
+                <div class="hourly-status" id="one-0-status"></div>
+                <div class="hourly-temp" id="one-0-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-1-time"></div>
+                <img class="hourly-img" src="" id="one-1-img">
+                <div class="hourly-status" id="one-1-status"></div>
+                <div class="hourly-temp" id="one-1-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-2-time"></div>
+                <img class="hourly-img" src="" id="one-2-img">
+                <div class="hourly-status" id="one-2-status"></div>
+                <div class="hourly-temp" id="one-2-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-3-time"></div>
+                <img class="hourly-img" src="" id="one-3-img">
+                <div class="hourly-status" id="one-3-status"></div>
+                <div class="hourly-temp" id="one-3-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-4-time"></div>
+                <img class="hourly-img" src="" id="one-4-img">
+                <div class="hourly-status" id="one-4-status"></div>
+                <div class="hourly-temp" id="one-4-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-5-time"></div>
+                <img class="hourly-img" src="" id="one-5-img">
+                <div class="hourly-status" id="one-5-status"></div>
+                <div class="hourly-temp" id="one-5-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-6-time"></div>
+                <img class="hourly-img" src="" id="one-6-img">
+                <div class="hourly-status" id="one-6-status"></div>
+                <div class="hourly-temp" id="one-6-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-7-time"></div>
+                <img class="hourly-img" src="" id="one-7-img">
+                <div class="hourly-status" id="one-7-status"></div>
+                <div class="hourly-temp" id="one-7-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-8-time"></div>
+                <img class="hourly-img" src="" id="one-8-img">
+                <div class="hourly-status" id="one-8-status"></div>
+                <div class="hourly-temp" id="one-8-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-9-time"></div>
+                <img class="hourly-img" src="" id="one-9-img">
+                <div class="hourly-status" id="one-9-status"></div>
+                <div class="hourly-temp" id="one-9-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-10-time"></div>
+                <img class="hourly-img" src="" id="one-10-img">
+                <div class="hourly-status" id="one-10-status"></div>
+                <div class="hourly-temp" id="one-10-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-11-time"></div>
+                <img class="hourly-img" src="" id="one-11-img">
+                <div class="hourly-status" id="one-11-status"></div>
+                <div class="hourly-temp" id="one-11-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-12-time"></div>
+                <img class="hourly-img" src="" id="one-12-img">
+                <div class="hourly-status" id="one-12-status"></div>
+                <div class="hourly-temp" id="one-12-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-13-time"></div>
+                <img class="hourly-img" src="" id="one-13-img">
+                <div class="hourly-status" id="one-13-status"></div>
+                <div class="hourly-temp" id="one-13-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-14-time"></div>
+                <img class="hourly-img" src="" id="one-14-img">
+                <div class="hourly-status" id="one-14-status"></div>
+                <div class="hourly-temp" id="one-14-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-15-time"></div>
+                <img class="hourly-img" src="" id="one-15-img">
+                <div class="hourly-status" id="one-15-status"></div>
+                <div class="hourly-temp" id="one-15-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-16-time"></div>
+                <img class="hourly-img" src="" id="one-16-img">
+                <div class="hourly-status" id="one-16-status"></div>
+                <div class="hourly-temp" id="one-16-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-17-time"></div>
+                <img class="hourly-img" src="" id="one-17-img">
+                <div class="hourly-status" id="one-17-status"></div>
+                <div class="hourly-temp" id="one-17-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-18-time"></div>
+                <img class="hourly-img" src="" id="one-18-img">
+                <div class="hourly-status" id="one-18-status"></div>
+                <div class="hourly-temp" id="one-18-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-19-time"></div>
+                <img class="hourly-img" src="" id="one-19-img">
+                <div class="hourly-status" id="one-19-status"></div>
+                <div class="hourly-temp" id="one-19-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-20-time"></div>
+                <img class="hourly-img" src="" id="one-20-img">
+                <div class="hourly-status" id="one-20-status"></div>
+                <div class="hourly-temp" id="one-20-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-21-time"></div>
+                <img class="hourly-img" src="" id="one-21-img">
+                <div class="hourly-status" id="one-21-status"></div>
+                <div class="hourly-temp" id="one-21-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-22-time"></div>
+                <img class="hourly-img" src="" id="one-22-img">
+                <div class="hourly-status" id="one-22-status"></div>
+                <div class="hourly-temp" id="one-22-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="one-23-time"></div>
+                <img class="hourly-img" src="" id="one-23-img">
+                <div class="hourly-status" id="one-23-status"></div>
+                <div class="hourly-temp" id="one-23-temp"></div>
+            </div>
+        </section>
+    </section>
+    <section class="second-sec">
+        <div class="for-dates" id="for-dates-two">
+        </div>
+        <section class="second-sec-child for-column">
+            <div class="hexa-one">
+                <div class="heading">Sun-Rise</div>
+                <img src="sun-rise.png" alt="" id="sun-rise" class="set-rise-moon">
+                <div class="below-txt" id="sun-rise-time-two"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Sun-Set</div>
+                <img src="sun-set.png" alt="" id="sun-set" class="set-rise-moon">
+                <div class="below-txt" id="sun-set-time-two"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Moon Phase</div>
+                <img src="moon.png" alt="" id="moon-phase" class="set-rise-moon">
+                <div class="below-txt" id="moon-phase-text-two"></div>
+            </div>
+        </section>
+        <section class="second-sec-child scroll-div">
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-0-time"></div>
+                <img class="hourly-img" src="" id="two-0-img">
+                <div class="hourly-status" id="two-0-status"></div>
+                <div class="hourly-temp" id="two-0-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-1-time"></div>
+                <img class="hourly-img" src="" id="two-1-img">
+                <div class="hourly-status" id="two-1-status"></div>
+                <div class="hourly-temp" id="two-1-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-2-time"></div>
+                <img class="hourly-img" src="" id="two-2-img">
+                <div class="hourly-status" id="two-2-status"></div>
+                <div class="hourly-temp" id="two-2-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-3-time"></div>
+                <img class="hourly-img" src="" id="two-3-img">
+                <div class="hourly-status" id="two-3-status"></div>
+                <div class="hourly-temp" id="two-3-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-4-time"></div>
+                <img class="hourly-img" src="" id="two-4-img">
+                <div class="hourly-status" id="two-4-status"></div>
+                <div class="hourly-temp" id="two-4-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-5-time"></div>
+                <img class="hourly-img" src="" id="two-5-img">
+                <div class="hourly-status" id="two-5-status"></div>
+                <div class="hourly-temp" id="two-5-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-6-time"></div>
+                <img class="hourly-img" src="" id="two-6-img">
+                <div class="hourly-status" id="two-6-status"></div>
+                <div class="hourly-temp" id="two-6-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-7-time"></div>
+                <img class="hourly-img" src="" id="two-7-img">
+                <div class="hourly-status" id="two-7-status"></div>
+                <div class="hourly-temp" id="two-7-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-8-time"></div>
+                <img class="hourly-img" src="" id="two-8-img">
+                <div class="hourly-status" id="two-8-status"></div>
+                <div class="hourly-temp" id="two-8-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-9-time"></div>
+                <img class="hourly-img" src="" id="two-9-img">
+                <div class="hourly-status" id="two-9-status"></div>
+                <div class="hourly-temp" id="two-9-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-10-time"></div>
+                <img class="hourly-img" src="" id="two-10-img">
+                <div class="hourly-status" id="two-10-status"></div>
+                <div class="hourly-temp" id="two-10-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-11-time"></div>
+                <img class="hourly-img" src="" id="two-11-img">
+                <div class="hourly-status" id="two-11-status"></div>
+                <div class="hourly-temp" id="two-11-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-12-time"></div>
+                <img class="hourly-img" src="" id="two-12-img">
+                <div class="hourly-status" id="two-12-status"></div>
+                <div class="hourly-temp" id="two-12-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-13-time"></div>
+                <img class="hourly-img" src="" id="two-13-img">
+                <div class="hourly-status" id="two-13-status"></div>
+                <div class="hourly-temp" id="two-13-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-14-time"></div>
+                <img class="hourly-img" src="" id="two-14-img">
+                <div class="hourly-status" id="two-14-status"></div>
+                <div class="hourly-temp" id="two-14-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-15-time"></div>
+                <img class="hourly-img" src="" id="two-15-img">
+                <div class="hourly-status" id="two-15-status"></div>
+                <div class="hourly-temp" id="two-15-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-16-time"></div>
+                <img class="hourly-img" src="" id="two-16-img">
+                <div class="hourly-status" id="two-16-status"></div>
+                <div class="hourly-temp" id="two-16-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-17-time"></div>
+                <img class="hourly-img" src="" id="two-17-img">
+                <div class="hourly-status" id="two-17-status"></div>
+                <div class="hourly-temp" id="two-17-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-18-time"></div>
+                <img class="hourly-img" src="" id="two-18-img">
+                <div class="hourly-status" id="two-18-status"></div>
+                <div class="hourly-temp" id="two-18-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-19-time"></div>
+                <img class="hourly-img" src="" id="two-19-img">
+                <div class="hourly-status" id="two-19-status"></div>
+                <div class="hourly-temp" id="two-19-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-20-time"></div>
+                <img class="hourly-img" src="" id="two-20-img">
+                <div class="hourly-status" id="two-20-status"></div>
+                <div class="hourly-temp" id="two-20-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-21-time"></div>
+                <img class="hourly-img" src="" id="two-21-img">
+                <div class="hourly-status" id="two-21-status"></div>
+                <div class="hourly-temp" id="two-21-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-22-time"></div>
+                <img class="hourly-img" src="" id="two-22-img">
+                <div class="hourly-status" id="two-22-status"></div>
+                <div class="hourly-temp" id="two-22-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="two-23-time"></div>
+                <img class="hourly-img" src="" id="two-23-img">
+                <div class="hourly-status" id="two-23-status"></div>
+                <div class="hourly-temp" id="two-23-temp"></div>
+            </div>
+        </section>
+    </section>
+    <section class="second-sec">
+        <div class="for-dates" id="for-dates-three">
+        </div>
+        <section class="second-sec-child for-column">
+            <div class="hexa-one">
+                <div class="heading">Sun-Rise</div>
+                <img src="sun-rise.png" alt="" id="sun-rise" class="set-rise-moon">
+                <div class="below-txt" id="sun-rise-time-three"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Sun-Set</div>
+                <img src="sun-set.png" alt="" id="sun-set" class="set-rise-moon">
+                <div class="below-txt" id="sun-set-time-three"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Moon Phase</div>
+                <img src="moon.png" alt="" id="moon-phase" class="set-rise-moon">
+                <div class="below-txt" id="moon-phase-text-three"></div>
+            </div>
+        </section>
+        <section class="second-sec-child scroll-div">
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-0-time"></div>
+                <img class="hourly-img" src="" id="three-0-img">
+                <div class="hourly-status" id="three-0-status"></div>
+                <div class="hourly-temp" id="three-0-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-1-time"></div>
+                <img class="hourly-img" src="" id="three-1-img">
+                <div class="hourly-status" id="three-1-status"></div>
+                <div class="hourly-temp" id="three-1-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-2-time"></div>
+                <img class="hourly-img" src="" id="three-2-img">
+                <div class="hourly-status" id="three-2-status"></div>
+                <div class="hourly-temp" id="three-2-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-3-time"></div>
+                <img class="hourly-img" src="" id="three-3-img">
+                <div class="hourly-status" id="three-3-status"></div>
+                <div class="hourly-temp" id="three-3-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-4-time"></div>
+                <img class="hourly-img" src="" id="three-4-img">
+                <div class="hourly-status" id="three-4-status"></div>
+                <div class="hourly-temp" id="three-4-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-5-time"></div>
+                <img class="hourly-img" src="" id="three-5-img">
+                <div class="hourly-status" id="three-5-status"></div>
+                <div class="hourly-temp" id="three-5-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-6-time"></div>
+                <img class="hourly-img" src="" id="three-6-img">
+                <div class="hourly-status" id="three-6-status"></div>
+                <div class="hourly-temp" id="three-6-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-7-time"></div>
+                <img class="hourly-img" src="" id="three-7-img">
+                <div class="hourly-status" id="three-7-status"></div>
+                <div class="hourly-temp" id="three-7-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-8-time"></div>
+                <img class="hourly-img" src="" id="three-8-img">
+                <div class="hourly-status" id="three-8-status"></div>
+                <div class="hourly-temp" id="three-8-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-9-time"></div>
+                <img class="hourly-img" src="" id="three-9-img">
+                <div class="hourly-status" id="three-9-status"></div>
+                <div class="hourly-temp" id="three-9-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-10-time"></div>
+                <img class="hourly-img" src="" id="three-10-img">
+                <div class="hourly-status" id="three-10-status"></div>
+                <div class="hourly-temp" id="three-10-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-11-time"></div>
+                <img class="hourly-img" src="" id="three-11-img">
+                <div class="hourly-status" id="three-11-status"></div>
+                <div class="hourly-temp" id="three-11-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-12-time"></div>
+                <img class="hourly-img" src="" id="three-12-img">
+                <div class="hourly-status" id="three-12-status"></div>
+                <div class="hourly-temp" id="three-12-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-13-time"></div>
+                <img class="hourly-img" src="" id="three-13-img">
+                <div class="hourly-status" id="three-13-status"></div>
+                <div class="hourly-temp" id="three-13-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-14-time"></div>
+                <img class="hourly-img" src="" id="three-14-img">
+                <div class="hourly-status" id="three-14-status"></div>
+                <div class="hourly-temp" id="three-14-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-15-time"></div>
+                <img class="hourly-img" src="" id="three-15-img">
+                <div class="hourly-status" id="three-15-status"></div>
+                <div class="hourly-temp" id="three-15-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-16-time"></div>
+                <img class="hourly-img" src="" id="three-16-img">
+                <div class="hourly-status" id="three-16-status"></div>
+                <div class="hourly-temp" id="three-16-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-17-time"></div>
+                <img class="hourly-img" src="" id="three-17-img">
+                <div class="hourly-status" id="three-17-status"></div>
+                <div class="hourly-temp" id="three-17-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-18-time"></div>
+                <img class="hourly-img" src="" id="three-18-img">
+                <div class="hourly-status" id="three-18-status"></div>
+                <div class="hourly-temp" id="three-18-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-19-time"></div>
+                <img class="hourly-img" src="" id="three-19-img">
+                <div class="hourly-status" id="three-19-status"></div>
+                <div class="hourly-temp" id="three-19-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-20-time"></div>
+                <img class="hourly-img" src="" id="three-20-img">
+                <div class="hourly-status" id="three-20-status"></div>
+                <div class="hourly-temp" id="three-20-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-21-time"></div>
+                <img class="hourly-img" src="" id="three-21-img">
+                <div class="hourly-status" id="three-21-status"></div>
+                <div class="hourly-temp" id="three-21-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-22-time"></div>
+                <img class="hourly-img" src="" id="three-22-img">
+                <div class="hourly-status" id="three-22-status"></div>
+                <div class="hourly-temp" id="three-22-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="three-23-time"></div>
+                <img class="hourly-img" src="" id="three-23-img">
+                <div class="hourly-status" id="three-23-status"></div>
+                <div class="hourly-temp" id="three-23-temp"></div>
+            </div>
+        </section>
+    </section>
+    <section class="second-sec ">
+        <div class="for-dates" id="for-dates-four">
+        </div>
+        <section class="second-sec-child for-column">
+            <div class="hexa-one">
+                <div class="heading">Sun-Rise</div>
+                <img src="sun-rise.png" alt="" id="sun-rise" class="set-rise-moon">
+                <div class="below-txt" id="sun-rise-time-four"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Sun-Set</div>
+                <img src="sun-set.png" alt="" id="sun-set" class="set-rise-moon">
+                <div class="below-txt" id="sun-set-time-four"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Moon Phase</div>
+                <img src="moon.png" alt="" id="moon-phase" class="set-rise-moon">
+                <div class="below-txt" id="moon-phase-text-four"></div>
+            </div>
+        </section>
+        <section class="second-sec-child scroll-div">
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-0-time"></div>
+                <img class="hourly-img" src="" id="four-0-img">
+                <div class="hourly-status" id="four-0-status"></div>
+                <div class="hourly-temp" id="four-0-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-1-time"></div>
+                <img class="hourly-img" src="" id="four-1-img">
+                <div class="hourly-status" id="four-1-status"></div>
+                <div class="hourly-temp" id="four-1-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-2-time"></div>
+                <img class="hourly-img" src="" id="four-2-img">
+                <div class="hourly-status" id="four-2-status"></div>
+                <div class="hourly-temp" id="four-2-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-3-time"></div>
+                <img class="hourly-img" src="" id="four-3-img">
+                <div class="hourly-status" id="four-3-status"></div>
+                <div class="hourly-temp" id="four-3-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-4-time"></div>
+                <img class="hourly-img" src="" id="four-4-img">
+                <div class="hourly-status" id="four-4-status"></div>
+                <div class="hourly-temp" id="four-4-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-5-time"></div>
+                <img class="hourly-img" src="" id="four-5-img">
+                <div class="hourly-status" id="four-5-status"></div>
+                <div class="hourly-temp" id="four-5-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-6-time"></div>
+                <img class="hourly-img" src="" id="four-6-img">
+                <div class="hourly-status" id="four-6-status"></div>
+                <div class="hourly-temp" id="four-6-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-7-time"></div>
+                <img class="hourly-img" src="" id="four-7-img">
+                <div class="hourly-status" id="four-7-status"></div>
+                <div class="hourly-temp" id="four-7-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-8-time"></div>
+                <img class="hourly-img" src="" id="four-8-img">
+                <div class="hourly-status" id="four-8-status"></div>
+                <div class="hourly-temp" id="four-8-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-9-time"></div>
+                <img class="hourly-img" src="" id="four-9-img">
+                <div class="hourly-status" id="four-9-status"></div>
+                <div class="hourly-temp" id="four-9-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-10-time"></div>
+                <img class="hourly-img" src="" id="four-10-img">
+                <div class="hourly-status" id="four-10-status"></div>
+                <div class="hourly-temp" id="four-10-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-11-time"></div>
+                <img class="hourly-img" src="" id="four-11-img">
+                <div class="hourly-status" id="four-11-status"></div>
+                <div class="hourly-temp" id="four-11-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-12-time"></div>
+                <img class="hourly-img" src="" id="four-12-img">
+                <div class="hourly-status" id="four-12-status"></div>
+                <div class="hourly-temp" id="four-12-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-13-time"></div>
+                <img class="hourly-img" src="" id="four-13-img">
+                <div class="hourly-status" id="four-13-status"></div>
+                <div class="hourly-temp" id="four-13-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-14-time"></div>
+                <img class="hourly-img" src="" id="four-14-img">
+                <div class="hourly-status" id="four-14-status"></div>
+                <div class="hourly-temp" id="four-14-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-15-time"></div>
+                <img class="hourly-img" src="" id="four-15-img">
+                <div class="hourly-status" id="four-15-status"></div>
+                <div class="hourly-temp" id="four-15-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-16-time"></div>
+                <img class="hourly-img" src="" id="four-16-img">
+                <div class="hourly-status" id="four-16-status"></div>
+                <div class="hourly-temp" id="four-16-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-17-time"></div>
+                <img class="hourly-img" src="" id="four-17-img">
+                <div class="hourly-status" id="four-17-status"></div>
+                <div class="hourly-temp" id="four-17-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-18-time"></div>
+                <img class="hourly-img" src="" id="four-18-img">
+                <div class="hourly-status" id="four-18-status"></div>
+                <div class="hourly-temp" id="four-18-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-19-time"></div>
+                <img class="hourly-img" src="" id="four-19-img">
+                <div class="hourly-status" id="four-19-status"></div>
+                <div class="hourly-temp" id="four-19-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-20-time"></div>
+                <img class="hourly-img" src="" id="four-20-img">
+                <div class="hourly-status" id="four-20-status"></div>
+                <div class="hourly-temp" id="four-20-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-21-time"></div>
+                <img class="hourly-img" src="" id="four-21-img">
+                <div class="hourly-status" id="four-21-status"></div>
+                <div class="hourly-temp" id="four-21-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-22-time"></div>
+                <img class="hourly-img" src="" id="four-22-img">
+                <div class="hourly-status" id="four-22-status"></div>
+                <div class="hourly-temp" id="four-22-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="four-23-time"></div>
+                <img class="hourly-img" src="" id="four-23-img">
+                <div class="hourly-status" id="four-23-status"></div>
+                <div class="hourly-temp" id="four-23-temp"></div>
+            </div>
+        </section>
+    </section>
+    <section class="second-sec">
+        <div class="for-dates" id="for-dates-five">
+        </div>
+        <section class="second-sec-child  for-column">
+            <div class="hexa-one">
+                <div class="heading">Sun-Rise</div>
+                <img src="sun-rise.png" alt="" id="sun-rise" class="set-rise-moon">
+                <div class="below-txt" id="sun-rise-time-five"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Sun-Set</div>
+                <img src="sun-set.png" alt="" id="sun-set" class="set-rise-moon">
+                <div class="below-txt" id="sun-set-time-five"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Moon Phase</div>
+                <img src="moon.png" alt="" id="moon-phase" class="set-rise-moon">
+                <div class="below-txt" id="moon-phase-text-five"></div>
+            </div>
+        </section>
+        <section class="second-sec-child scroll-div">
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-0-time"></div>
+                <img class="hourly-img" src="" id="five-0-img">
+                <div class="hourly-status" id="five-0-status"></div>
+                <div class="hourly-temp" id="five-0-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-1-time"></div>
+                <img class="hourly-img" src="" id="five-1-img">
+                <div class="hourly-status" id="five-1-status"></div>
+                <div class="hourly-temp" id="five-1-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-2-time"></div>
+                <img class="hourly-img" src="" id="five-2-img">
+                <div class="hourly-status" id="five-2-status"></div>
+                <div class="hourly-temp" id="five-2-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-3-time"></div>
+                <img class="hourly-img" src="" id="five-3-img">
+                <div class="hourly-status" id="five-3-status"></div>
+                <div class="hourly-temp" id="five-3-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-4-time"></div>
+                <img class="hourly-img" src="" id="five-4-img">
+                <div class="hourly-status" id="five-4-status"></div>
+                <div class="hourly-temp" id="five-4-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-5-time"></div>
+                <img class="hourly-img" src="" id="five-5-img">
+                <div class="hourly-status" id="five-5-status"></div>
+                <div class="hourly-temp" id="five-5-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-6-time"></div>
+                <img class="hourly-img" src="" id="five-6-img">
+                <div class="hourly-status" id="five-6-status"></div>
+                <div class="hourly-temp" id="five-6-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-7-time"></div>
+                <img class="hourly-img" src="" id="five-7-img">
+                <div class="hourly-status" id="five-7-status"></div>
+                <div class="hourly-temp" id="five-7-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-8-time"></div>
+                <img class="hourly-img" src="" id="five-8-img">
+                <div class="hourly-status" id="five-8-status"></div>
+                <div class="hourly-temp" id="five-8-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-9-time"></div>
+                <img class="hourly-img" src="" id="five-9-img">
+                <div class="hourly-status" id="five-9-status"></div>
+                <div class="hourly-temp" id="five-9-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-10-time"></div>
+                <img class="hourly-img" src="" id="five-10-img">
+                <div class="hourly-status" id="five-10-status"></div>
+                <div class="hourly-temp" id="five-10-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-11-time"></div>
+                <img class="hourly-img" src="" id="five-11-img">
+                <div class="hourly-status" id="five-11-status"></div>
+                <div class="hourly-temp" id="five-11-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-12-time"></div>
+                <img class="hourly-img" src="" id="five-12-img">
+                <div class="hourly-status" id="five-12-status"></div>
+                <div class="hourly-temp" id="five-12-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-13-time"></div>
+                <img class="hourly-img" src="" id="five-13-img">
+                <div class="hourly-status" id="five-13-status"></div>
+                <div class="hourly-temp" id="five-13-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-14-time"></div>
+                <img class="hourly-img" src="" id="five-14-img">
+                <div class="hourly-status" id="five-14-status"></div>
+                <div class="hourly-temp" id="five-14-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-15-time"></div>
+                <img class="hourly-img" src="" id="five-15-img">
+                <div class="hourly-status" id="five-15-status"></div>
+                <div class="hourly-temp" id="five-15-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-16-time"></div>
+                <img class="hourly-img" src="" id="five-16-img">
+                <div class="hourly-status" id="five-16-status"></div>
+                <div class="hourly-temp" id="five-16-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-17-time"></div>
+                <img class="hourly-img" src="" id="five-17-img">
+                <div class="hourly-status" id="five-17-status"></div>
+                <div class="hourly-temp" id="five-17-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-18-time"></div>
+                <img class="hourly-img" src="" id="five-18-img">
+                <div class="hourly-status" id="five-18-status"></div>
+                <div class="hourly-temp" id="five-18-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-19-time"></div>
+                <img class="hourly-img" src="" id="five-19-img">
+                <div class="hourly-status" id="five-19-status"></div>
+                <div class="hourly-temp" id="five-19-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-20-time"></div>
+                <img class="hourly-img" src="" id="five-20-img">
+                <div class="hourly-status" id="five-20-status"></div>
+                <div class="hourly-temp" id="five-20-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-21-time"></div>
+                <img class="hourly-img" src="" id="five-21-img">
+                <div class="hourly-status" id="five-21-status"></div>
+                <div class="hourly-temp" id="five-21-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-22-time"></div>
+                <img class="hourly-img" src="" id="five-22-img">
+                <div class="hourly-status" id="five-22-status"></div>
+                <div class="hourly-temp" id="five-22-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="five-23-time"></div>
+                <img class="hourly-img" src="" id="five-23-img">
+                <div class="hourly-status" id="five-23-status"></div>
+                <div class="hourly-temp" id="five-23-temp"></div>
+            </div>
+        </section>
+    </section>
+    <section class="second-sec">
+        <div class="for-dates" id="for-dates-six">
+        </div>
+        <section class="second-sec-child for-column">
+            <div class="hexa-one">
+                <div class="heading">Sun-Rise</div>
+                <img src="sun-rise.png" alt="" id="sun-rise" class="set-rise-moon">
+                <div class="below-txt" id="sun-rise-time-six"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Sun-Set</div>
+                <img src="sun-set.png" alt="" id="sun-set" class="set-rise-moon">
+                <div class="below-txt" id="sun-set-time-six"></div>
+            </div>
+            <div class="hexa-one">
+                <div class="heading">Moon Phase</div>
+                <img src="moon.png" alt="" id="moon-phase" class="set-rise-moon">
+                <div class="below-txt" id="moon-phase-text-six"></div>
+            </div>
+        </section>
+        <section class="second-sec-child scroll-div">
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-0-time"></div>
+                <img class="hourly-img" src="" id="six-0-img">
+                <div class="hourly-status" id="six-0-status"></div>
+                <div class="hourly-temp" id="six-0-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-1-time"></div>
+                <img class="hourly-img" src="" id="six-1-img">
+                <div class="hourly-status" id="six-1-status"></div>
+                <div class="hourly-temp" id="six-1-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-2-time"></div>
+                <img class="hourly-img" src="" id="six-2-img">
+                <div class="hourly-status" id="six-2-status"></div>
+                <div class="hourly-temp" id="six-2-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-3-time"></div>
+                <img class="hourly-img" src="" id="six-3-img">
+                <div class="hourly-status" id="six-3-status"></div>
+                <div class="hourly-temp" id="six-3-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-4-time"></div>
+                <img class="hourly-img" src="" id="six-4-img">
+                <div class="hourly-status" id="six-4-status"></div>
+                <div class="hourly-temp" id="six-4-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-5-time"></div>
+                <img class="hourly-img" src="" id="six-5-img">
+                <div class="hourly-status" id="six-5-status"></div>
+                <div class="hourly-temp" id="six-5-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-6-time"></div>
+                <img class="hourly-img" src="" id="six-6-img">
+                <div class="hourly-status" id="six-6-status"></div>
+                <div class="hourly-temp" id="six-6-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-7-time"></div>
+                <img class="hourly-img" src="" id="six-7-img">
+                <div class="hourly-status" id="six-7-status"></div>
+                <div class="hourly-temp" id="six-7-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-8-time"></div>
+                <img class="hourly-img" src="" id="six-8-img">
+                <div class="hourly-status" id="six-8-status"></div>
+                <div class="hourly-temp" id="six-8-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-9-time"></div>
+                <img class="hourly-img" src="" id="six-9-img">
+                <div class="hourly-status" id="six-9-status"></div>
+                <div class="hourly-temp" id="six-9-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-10-time"></div>
+                <img class="hourly-img" src="" id="six-10-img">
+                <div class="hourly-status" id="six-10-status"></div>
+                <div class="hourly-temp" id="six-10-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-11-time"></div>
+                <img class="hourly-img" src="" id="six-11-img">
+                <div class="hourly-status" id="six-11-status"></div>
+                <div class="hourly-temp" id="six-11-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-12-time"></div>
+                <img class="hourly-img" src="" id="six-12-img">
+                <div class="hourly-status" id="six-12-status"></div>
+                <div class="hourly-temp" id="six-12-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-13-time"></div>
+                <img class="hourly-img" src="" id="six-13-img">
+                <div class="hourly-status" id="six-13-status"></div>
+                <div class="hourly-temp" id="six-13-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-14-time"></div>
+                <img class="hourly-img" src="" id="six-14-img">
+                <div class="hourly-status" id="six-14-status"></div>
+                <div class="hourly-temp" id="six-14-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-15-time"></div>
+                <img class="hourly-img" src="" id="six-15-img">
+                <div class="hourly-status" id="six-15-status"></div>
+                <div class="hourly-temp" id="six-15-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-16-time"></div>
+                <img class="hourly-img" src="" id="six-16-img">
+                <div class="hourly-status" id="six-16-status"></div>
+                <div class="hourly-temp" id="six-16-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-17-time"></div>
+                <img class="hourly-img" src="" id="six-17-img">
+                <div class="hourly-status" id="six-17-status"></div>
+                <div class="hourly-temp" id="six-17-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-18-time"></div>
+                <img class="hourly-img" src="" id="six-18-img">
+                <div class="hourly-status" id="six-18-status"></div>
+                <div class="hourly-temp" id="six-18-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-19-time"></div>
+                <img class="hourly-img" src="" id="six-19-img">
+                <div class="hourly-status" id="six-19-status"></div>
+                <div class="hourly-temp" id="six-19-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-20-time"></div>
+                <img class="hourly-img" src="" id="six-20-img">
+                <div class="hourly-status" id="six-20-status"></div>
+                <div class="hourly-temp" id="six-20-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-21-time"></div>
+                <img class="hourly-img" src="" id="six-21-img">
+                <div class="hourly-status" id="six-21-status"></div>
+                <div class="hourly-temp" id="six-21-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-22-time"></div>
+                <img class="hourly-img" src="" id="six-22-img">
+                <div class="hourly-status" id="six-22-status"></div>
+                <div class="hourly-temp" id="six-22-temp"></div>
+            </div>
+            <div class="hourly-div">
+                <div class="hourly-time" id="six-23-time"></div>
+                <img class="hourly-img" src="" id="six-23-img">
+                <div class="hourly-status" id="six-23-status"></div>
+                <div class="hourly-temp" id="six-23-temp"></div>
+            </div>
+        </section>
+    </section>
+    <script src="script.js"></script>
+</body>
+
+</html>

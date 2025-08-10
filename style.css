@@ -1,0 +1,357 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #00002c;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.parent-sec {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mainsec {
+    width: 93vw;
+    height: 95vh;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left-sec {
+    width: 280px;
+    height: 100%;
+    background-color: rgb(0, 26, 105);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.input-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.search {
+    color: white;
+    padding: 7px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 44);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.search:hover {
+    scale: 1.2;
+}
+
+.alpha-one {
+    background-color: lightgray;
+    color: black;
+    text-align: center;
+    padding: 3px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.alpha-one:focus {
+    outline: 1px solid rgb(0, 191, 255);
+}
+
+.alpha-two {
+    width: 110px;
+    height: 90px;
+}
+
+.alpha-three {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.alpha-four {
+    font-size: 27px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.alpha-five {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    justify-content: space-between;
+    height: 42px;
+    opacity: 0.8;
+}
+
+.right-sec {
+    width: 870px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.beta-one {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dc,
+.fn {
+    margin-left: 10px;
+    color: black;
+    padding: 8px;
+    border-radius: 30px;
+    border: none;
+}
+
+.dc:hover,
+.fn:hover {
+    scale: 1.1;
+    cursor: pointer;
+}
+
+.dc:active,
+.fn:active {
+    scale: 1;
+}
+
+.beta-one-child {
+    width: 14%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.beta-two {
+    width: 100%;
+    height: 160px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.appName {
+    font-size: 18px;
+    font-weight: 600;
+    width: 270px;
+}
+
+.further-days {
+    width: 125px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(0, 26, 105);
+    border-radius: 15px;
+}
+
+.weather-icon-further {
+    width: 50px;
+    height: 50px;
+}
+
+.temp-status {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.temp {
+    font-size: 13px;
+}
+
+.beta-three {
+    width: 100%;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.beta-three-child {
+    width: 88%;
+    text-align: start;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.beta-four {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.beta-four-child,
+.beta-five-child {
+    width: 45%;
+    height: 98%;
+    background-color: rgb(0, 26, 105);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.gamma-one,
+.gamma-three {
+    font-size: 16px;
+}
+
+.gamma-two {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.beta-five {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* first section Ended */
+
+.second-sec {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.for-dates {
+    height: 4vh;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+.hexa-one {
+    width: 350px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #001a69;
+    border-radius: 16px;
+}
+
+.heading {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.below-txt {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.set-rise-moon {
+    width: 120px;
+    height: 80px;
+}
+
+.second-sec-child {
+    width: 97vw;
+    height: 45vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.scroll-div {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #001a69 #00002c;
+    overflow-y: hidden;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: #00002c;
+    border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    background-color: #001a69;
+    border-radius: 10px;
+}
+
+.hourly-div {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 220px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #001a69;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hourly-img {
+    width: 60px;
+    height: 50px;
+}
+
+.hourly-time,
+.hourly-status,
+.hourly-temp {
+    height: 10px;
+}
