@@ -72,12 +72,12 @@ let RunMainFunc = async () => {
     try {
 
         if (input.value === "") {
-            URL = `http://api.weatherapi.com/v1/forecast.json?key=f6af0232d74244ad88994112252808&q=Peshawar&days=7&aqi=no&alerts=no`
+            URL = `https://api.weatherapi.com/v1/forecast.json?key=f6af0232d74244ad88994112252808&q=Peshawar&days=7&aqi=no&alerts=no`
             tofetch = await fetch(URL);
         }
 
         else {
-            URL = `http://api.weatherapi.com/v1/forecast.json?key=f6af0232d74244ad88994112252808&q=${input.value}&days=7&aqi=no&alerts=no`
+            URL = `https://api.weatherapi.com/v1/forecast.json?key=f6af0232d74244ad88994112252808&q=${input.value}&days=7&aqi=no&alerts=no`
             tofetch = await fetch(URL);
         }
         if (!tofetch.ok) {
@@ -322,5 +322,6 @@ input.addEventListener('keydown', (event) => {
 RunMainFunc()
 
 search.addEventListener('click', RunMainFunc)
+
 
 
