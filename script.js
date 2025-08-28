@@ -1,4 +1,3 @@
-
 let input = document.getElementById('input-country')
 let search = document.getElementById('search')
 let mainIcon = document.getElementById('main-icon')
@@ -73,15 +72,14 @@ let RunMainFunc = async () => {
     try {
 
         if (input.value === "") {
-            URL = `https://api.weatherapi.com/v1/forecast.json?key=8ddb40505a1c41d793280816251008&q=islamabad&days=6&aqi=no&alerts=no`
+            URL = `http://api.weatherapi.com/v1/forecast.json?key=f6af0232d74244ad88994112252808&q=Peshawar&days=7&aqi=no&alerts=no`
             tofetch = await fetch(URL);
         }
 
         else {
-            URL = `https://api.weatherapi.com/v1/forecast.json?key=8ddb40505a1c41d793280816251008&q=${input.value}&days=6&aqi=no&alerts=no`
+            URL = `http://api.weatherapi.com/v1/forecast.json?key=f6af0232d74244ad88994112252808&q=${input.value}&days=7&aqi=no&alerts=no`
             tofetch = await fetch(URL);
         }
-
         if (!tofetch.ok) {
             throw new Error(`Error ${tofetch.status}: ${tofetch.statusText}`)
 
@@ -324,4 +322,5 @@ input.addEventListener('keydown', (event) => {
 RunMainFunc()
 
 search.addEventListener('click', RunMainFunc)
+
 
